@@ -1,11 +1,12 @@
-var dict = require('cmu-pronouncing-dictionary')
+var cmudict = require('@lunarisapp/cmudict')
+var dict = cmudict.dict()
 
 var own = {}.hasOwnProperty
 
 var words = []
 
 Object.keys(dict).forEach(function(word) {
-  words.push({word: word, pron: dict[word]})
+  words.push({word: word, pron: dict[word][0].join(' ')})
 })
 
 module.exports = rhymes
@@ -21,7 +22,7 @@ function rhymes(value) {
 
   if (!own.call(dict, value)) return results
 
-  pron = dict[value]
+  pron = dict[value][0].join(' ')
 
   words.forEach(check)
 

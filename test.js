@@ -29,12 +29,12 @@ test('rhymes', function(t) {
       'denki',
       'dinky',
       'donkey',
-      'donkey', // Different pronunciation
       'francie',
-      'franke',
       'frankie',
       'hankey',
-      'hanky'
+      'hanky',
+      'helsinki',
+      'honky'
     ],
     'monkey: should result in rhymes!'
   )
